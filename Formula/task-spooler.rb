@@ -6,8 +6,8 @@ class TaskSpooler < Formula
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
-    FileUtils.mv bin/"ts", bin/"tsp"
-    FileUtils.mv man1/"ts.1", man1/"tsp.1"
+    mv bin/"ts", bin/"tsp"
+    mv man1/"ts.1", man1/"tsp.1"
   end
 
   test do
